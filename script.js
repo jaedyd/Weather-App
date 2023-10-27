@@ -5,7 +5,7 @@ const searchButton = document.querySelector(".button");
 const weathericon = document.querySelector(".weather-icon");
 
 async function getWeather(city) {
-  const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid={process.env.APIKEY}');
+  const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + API.APIKEY);
 
   if(response.status == 404) {
     document.querySelector(".weather-info").style.display = 'none';
